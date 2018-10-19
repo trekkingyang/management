@@ -9,48 +9,62 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: '/',
     proxyTable: {
-      '/getList': {  //使用"/api"来代替"http://f.apiplus.c"
+      '/listAll': {  //使用"/api"来代替"http://f.apiplus.c"
         target: 'http://localhost:3000', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
-          '^/getList': 'http://localhost:3000/list' //路径重写
+          '^/listAll': 'http://localhost:3000/list' //路径重写
         }
       },
-      '/search': {  //使用"/api"来代替"http://f.apiplus.c"
+      '/appList': {  //使用"/api"来代替"http://f.apiplus.c"
         target: 'http://localhost:3000', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
-          '^/search': 'http://localhost:3000/search' //路径重写
+          '^/appList': 'http://localhost:3000/appList' //路径重写
         }
       },
-      '/add': {  //使用"/api"来代替"http://f.apiplus.c"
+      '/app': {  //使用"/api"来代替"http://f.apiplus.c"
         target: 'http://localhost:3000', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
-          '^/add': 'http://localhost:3000/add' //路径重写
+          '^/app': 'http://localhost:3000/app' //路径重写
         }
       },
-      '/update': {  //使用"/api"来代替"http://f.apiplus.c"
+      '/register': {  //使用"/api"来代替"http://f.apiplus.c"
         target: 'http://localhost:3000', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
-          '^/update': 'http://localhost:3000/update' //路径重写
+          '^/register': 'http://localhost:3000/auth/register' //路径重写
         }
       },
-      '/delete': {  //使用"/api"来代替"http://f.apiplus.c"
+      '/sign': {  //使用"/api"来代替"http://f.apiplus.c"
         target: 'http://localhost:3000', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
-          '^/delete': 'http://localhost:3000/delete' //路径重写
+          '^/sign': 'http://localhost:3000/auth/sign' //路径重写
+        }
+      },
+      '/detail': {  //使用"/api"来代替"http://f.apiplus.c"
+        target: 'http://localhost:3000', //源地址
+        changeOrigin: true, //改变源
+        pathRewrite: {
+          '^/detail': 'http://localhost:3000/detail' //路径重写
+        }
+      },
+      '/category': {  //使用"/api"来代替"http://f.apiplus.c"
+        target: 'http://localhost:3000', //源地址
+        changeOrigin: true, //改变源
+        pathRewrite: {
+          '^/category': 'http://localhost:3000/category' //路径重写
         }
       },
       '/upload': {  //使用"/api"来代替"http://f.apiplus.c"
         target: 'http://localhost:3000', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
-          '^/upload': 'http://localhost:3000/upload/upload' //路径重写
+          '^/upload': 'http://localhost:3000/file/upload' //路径重写
         }
       },
       
@@ -87,7 +101,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
 
     /**
      * Source Maps
