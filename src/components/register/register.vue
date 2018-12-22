@@ -39,7 +39,7 @@
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           delete this.userForm.checkPassword
-          axios.post('http://localhost:8080/register',this.userForm).then(res => {
+          axios.post('/register',this.userForm).then(res => {
             console.log(res);
           })
         });
